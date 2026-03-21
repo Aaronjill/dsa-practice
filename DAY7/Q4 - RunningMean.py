@@ -10,9 +10,10 @@ def detect_anomalies(scores):
     history=[]
     for i, score in enumerate(scores):
         if len(history) > 1:
-            roll_mean=np.mean(history)
-            roll_sd=np.std(history)
-            threshold = roll_mean-(2*roll_sd)
+            mean=sum(history)/len(history)
+            var=sum((x-mean)**2 for x in history)/len(history)
+            roll_sd=var**0.5
+            threshold = mean-(2*roll_sd)
             if score < threshold:
                 index.append(i)
         history.append(score)
