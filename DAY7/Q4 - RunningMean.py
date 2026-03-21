@@ -5,7 +5,6 @@
 #anomaly. Return list of flagged indices.
 
 def detect_anomalies(scores):
-    import numpy as np
     index=[]
     history=[]
     for i, score in enumerate(scores):
