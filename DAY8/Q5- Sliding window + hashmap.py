@@ -1,5 +1,3 @@
-#Topic: Sliding window + hashmap — Stage 3 combination
-#Target: 20–25 min
 #Your pipeline receives a stream of fruit labels. Find the minimum window size that contains at least one of each required label.
 
 
